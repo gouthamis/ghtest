@@ -1,0 +1,10 @@
+
+    <!--%= f.select :field_type, %w[text_field check_box] %-->
+ <table>
+   <% column_helper.map do |i| %>
+ <tr>
+    <td><%= f.text_field :name, :value => i ,  placeholder: "field_name" %></td>
+    <td><%= f.text_field :value %></td>
+</tr>
+    <%end%>
+    </table>

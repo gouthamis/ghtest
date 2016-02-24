@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="ISO-8859-1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<title>Cover Page2</title>
+<style>
+#value{
+	font-size: 15px;
+	float: right;
+	width: 10em;
+	margin-right: 59em;
+	padding-left: 10em;
+}
+#header{
+	font-weight: bolder;
+}
+</style>
+</head>
+<body>
+	<%= form_tag('p2_generate_xml', :method=>'post') do %>
+	<div class="container">
+		<font color="#941c62">
+			<h1>GH Package and Product Testing and Consulting Inc.</h1>
+			<div id='header'>
+				Customer Details
+			</div>
+			<p>Customer Name<%= text_field_tag 'dyn1','',:id => 'value' %></p>
+			<p>Customer Address 1<%= text_field_tag 'dyn2','',:id => 'value' %></p>
+			<p>Customer Address 2<%= text_field_tag 'dyn3','',:id => 'value' %></p>
+			<p>Test Personnel<%= text_field_tag 'dyn4','',:id => 'value' %></p>
+			<br />
+
+			<div id='header'>
+				Testing Performed by
+			</div>
+			<p>Company Name<%= text_field_tag 'dyn5','',:id => 'value' %></p>
+			<p>Company Address 1<%= text_field_tag 'dyn6','',:id => 'value' %></p>
+			<p>Company Address 2<%= text_field_tag 'dyn7','',:id => 'value' %></p>
+			<p>Company Name<%= text_field_tag 'dyn8','',:id => 'value' %></p>
+			<br />
+
+			<div id='header'>
+				Test Date(s)
+			</div>
+			<p>Testing Start Date<%= text_field_tag 'dyn9','',:id => 'value' %></p>
+			<br />
+
+			<div id='header'>
+				Through
+			</div>
+			<p>Testing End Date<%= text_field_tag 'dyn10','',:id => 'value' %></p>
+			<br />
+
+			<div id='header'>
+				Pack Identification
+			</div>
+			<p>Primary<%= text_field_tag 'dyn11','',:id => 'value' %></p>
+			<p>Alternate<%= text_field_tag 'dyn12','',:id => 'value' %></p>
+			<br />
+
+		</font>
+	</div>
+	<p>
+		<%= submit_tag 'Submit' %>
+	</p>
+	<% end %>
+</body>
+</html>

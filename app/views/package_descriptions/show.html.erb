@@ -1,0 +1,272 @@
+
+<div class="container">
+  <div class="page-break">
+    <%= render "layouts/home_form"%>
+    <%= render "home"%>
+    <%= render "authorization"%>
+    <b><%= @package_description.package_name %></b>
+    <% k = eval(@package_description.package_number)%>
+      <ol type="1">
+        <li> The Exterior corrugated cartor <b>(P/N:<%= k[0] %>)</b> contains everything listed below in one exterior box as presented for testing.</li>
+      <li>
+	  <ol type="A">
+	    <li>10 - inner chipboard carton <b>(P/N:<%= k[1] %>)</b> .Each inner chipboard box contains:</li>
+	  <ol type="I">
+	    <li>7 - positive means of closure Ziploc bags with pouch <b>(P/N:<%= k[2] %>)</b> </li>
+	    <ol type="i">
+	      <li>2 - ultra vials <b>(P/N:<%= k[3] %>)</b> </li>
+	      <ol type="a">
+	       <li>2 - scoops <b>(P/N:<%= k[4] %>)</b> </li>
+	       <li>2 - ultra vial caps <b>(P/N:<%= k[5] %>)</b> </li>
+	       </ol>
+	       <li>1 - Para Pak vial <b>(P/N:<%= k[6] %>)</b> </li>
+	       <ol type="a">
+	<li>1 - Spork <b>(P/N:<%= k[7] %>)</b> </li>
+	<li>2 - Para Pak vial cap  <b>(P/N:<%= k[8] %>)</b> </li>
+	</ol>
+	<li>Instruction set <b>(P/N:<%= k[9] %>)</b> </li>
+	</ol>
+	<li>Instruction sheet <b>(P/N:<%= k[10] %>)</b> </li>
+	<li>1 - Release key  <b>(P/N:<%= k[11] %>)</b> </li>
+	</ol>
+	<li>2 - Inner chipboard carton <b>(P/N:<%= k[12] %>)</b> . Each inner chipboard box contains:</li>
+	<ol type="I">
+		<li>7 - positive means of closure Ziploc bags with pouch <b>(P/N:<%= k[13] %>)</b>  </li>
+		<ol type="i">
+			<li>2 - ultra vials <b>(P/N:<%= k[14] %>)</b>  </li>
+			<ol type="a">
+				<li>2 - scoops <b>(P/N:<%= k[15] %>)</b> </li>
+				<li>2 - ultra vial caps <b>(P/N:<%= k[16] %>)</b> </li>
+				</ol>
+				<li>1 - Para Pak vial <b>(P/N:<%= k[17] %>)</b> </li>
+				<ol type="a">
+     <li>1 - Spork <b>(P/N:<%= k[18] %>)</b> </li>
+     <li>1 - Para Pak vial cap <b>(P/N:<%= k[19] %>)</b> </li>
+					</ol>
+	<li>Instruction set <b>(P/N:<%= k[20] %>)</b> </li>
+   <li>1 - dropper bottle <b>(P/N:<%= k[21] %>)</b> </li>
+   <ol type ="a">
+   	<li>1 - dropper bottle tip <b>(P/N:<%= k[22] %>)</b> </li>
+   	<li>1 - dropper bottle cap <b>(P/N:<%= k[23] %>)</b> </li>
+   	</ol>
+			</ol>
+
+		<li>Instruction sheet <b>(P/N:<%= k[24] %>)</b> </li>
+		<li>1 - Release key <b>(P/N:<%= k[25] %>)</b>  </li>
+		</ol>
+		<li>4 - Absorbent pads <b>(P/N:<%= k[26] %>)</b> </li>
+	</ol>
+	</ol>
+
+	<p><b>Alternate Pach 3414</b></p>
+	<ol type= "1">
+    <li>The Exterior corrugated carton<b>(P/N:<%= k[27] %>)</b> contains everything listed below in one exteriro box as presented for testign</li>
+		</ol>
+<ol type = "A">
+		  <li>4 - Absorbent pads<b>(P/N:<%= k[28] %>)</b>%></li>
+		  <li>1 - folded instruction sheet</li>
+		  <li>200 - positive means of closure Ziploc bags pouch <b>(P/N:<%= k[29] %>)</b>. Each Ziploc bag with pouch contains:
+		     <ol type ="i">
+                <li>1 - Para Pak vial<b>(P/N:<%= k[30] %>)</b>
+                	<ol type="a">
+                         <li>1 - Spork <b>(P/N:<%= k[31] %>)</b></li>
+                         <li>1 - Para Pak vial cap <b>(P/N:<%= k[32] %>)</b></li>
+                		</ol>
+                </li>
+                <li>1 - Instruction sheet <b>(P/N:<%= k[33] %>)</b></li>
+             </ol>
+		  </li>
+			</ol>
+<% table_view  = @package_description.package%>
+<% if not table_view.blank? %>
+
+<table border = '1'>
+<tr>
+<td>manufacturer</td>
+<td><%= table_view.manufacturer %></td>
+</tr>
+<tr>
+<td>manufacturer_location</td>
+<td><%= table_view.manufacturer_location %></td>
+</tr>
+<tr>
+<td>material</td>
+<td><%= table_view.material %></td>
+</tr>
+
+<tr>
+<td>box_style</td>
+<td><%= table_view.box_style %></td>
+</tr>
+
+<tr>
+<td>part</td>
+<td><%= table_view.part %></td>
+</tr>
+
+<tr>
+<td>bmc</td>
+<td><%= table_view.bmc %></td>
+</tr>
+
+<tr>
+<td>number_of_walls</td>
+<td><%= table_view.number_of_walls %></td>
+</tr>
+
+<tr>
+<td>board_cliper</td>
+<td><%= table_view.board_cliper %></td>
+</tr>
+
+<tr>
+<td>basis_weight_of_each_liner_and_medium</td>
+<td><%= table_view.basis_weight_of_each_liner_and_medium %></td>
+</tr>
+
+<tr>
+<td>inside_liner</td>
+<td><%= table_view.inside_liner %></td>
+</tr>
+
+
+<tr>
+<td>first_medium</td>
+<td><%= table_view.first_medium %></td>
+</tr>
+
+<tr>
+<td>outside_liner</td>
+<td><%= table_view.outside_liner %></td>
+</tr>
+
+<tr>
+<td>combined_basis_weight</td>
+<td><%= table_view.combined_basis_weight %></td>
+</tr>
+
+<tr>
+<td>flute</td>
+<td><%= table_view.flute %></td>
+</tr>
+
+<tr>
+<td>method_of_joining_panels</td>
+<td><%= table_view.method_of_joining_panels %></td>
+</tr>
+
+<tr>
+<td>manufacturers_joint</td>
+<td><%= table_view.manufacturers_joint %></td>
+</tr>
+
+<tr>
+<td>flap_size</td>
+<td><%= table_view.flap_size %></td>
+</tr>
+
+<tr>
+<td>location</td>
+<td><%= table_view.location %></td>
+</tr>
+
+<tr>
+<td>dimensions_external</td>
+<td><%= table_view.dimensions_external%></td>
+</tr>
+
+<tr>
+<td>dimensions_internal</td>
+<td><%= table_view.dimensions_internal %></td>
+</tr>
+
+<tr>
+<td>top_flap_inner_gap_or_meet</td>
+<td><%= table_view.top_flap_inner_gap_or_meet %></td>
+</tr>
+
+<tr>
+<td>top_flap_outer_overlap_or_meet</td>
+<td><%= table_view.top_flap_outer_overlap_or_meet %></td>
+</tr>
+
+<tr>
+<td>bottom_flap_inner_gap_or_meet </td>
+<td><%= table_view.bottom_flap_inner_gap_or_meet %></td>
+</tr>
+
+<tr>
+<td>bottom_flap_outer_overlap_or_meet </td>
+<td><%= table_view.bottom_flap_outer_overlap_or_meet %></td>
+</tr>
+
+<tr>
+<td>stacking_height</td>
+<td><%= table_view.stacking_height  %></td>
+</tr>
+
+<tr>
+<td>handles_material_type_number_and_position</td>
+<td><%= table_view.handles_material_type_number_and_position %></td>
+</tr>
+
+<tr>
+<td>tare_weight</td>
+<td><%= table_view.tare_weight %></td>
+</tr>
+
+<tr>
+<td>closure_method_of_box </td>
+<td><%= table_view.closure_method_of_box %></td>
+</tr>
+
+<tr>
+<td>top</td>
+<td><%= table_view.top %></td>
+</tr>
+
+<tr>
+<td>bottom</td>
+<td><%= table_view.bottom%> </td>
+</tr>
+<%= link_to "Edit table", edit_package_path(table_view)%>
+
+
+
+<br />
+<tr>
+				<% table_view.images.each do | image |%>
+				<td><%= image_tag image.photo(:medium) %></td>
+				<%end%>
+				</tr>
+				</table>
+<br />
+<% end %>
+
+<div class="pdf_exclude">
+
+<%= link_to 'add tables', {:controller=>"packages", :action=>"new", :id => @package_description.id}, :class=>"btn btn-success" %>
+
+
+<!--<%= link_to 'Back', package_descriptions_path %>-->
+
+
+
+
+<!-- <%= link_to 'Edit', edit_package_description_path(@package_description) %> |
+<%= link_to 'Back', package_descriptions_path %> -->
+<%= link_to 'See Pdf', package_description_path(@package_description,:format => "pdf") %>
+	</div>
+</div>
+</div>
+<style>
+@media print {
+  .page-break {
+    display: block;
+    /*page-break-before: always; */
+  }
+  .pdf_exclude {
+        display: none;
+  }
+}
+</style>

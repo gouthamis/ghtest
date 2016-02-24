@@ -1,0 +1,177 @@
+<h1></h1>
+<%= form_for(@package) do |f| %>
+  <% if @package.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@package.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% @package.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<table>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+<tr>
+<td><%= f.label :manufacturer %></td>
+<td><%= f.text_field :manufacturer %></td>
+</tr>
+<tr>
+<td><%= f.label :manufacturer_location %></td>
+<td><%= f.text_field :manufacturer_location %></td>
+</tr>
+<tr>
+<td><%= f.label :material %></td>
+<td><%= f.text_field :material %></td>
+</tr>
+
+<tr>
+<td><%= f.label :box_style %></td>
+<td><%= f.text_field :box_style %></td>
+</tr>
+
+<tr>
+<td><%= f.label :part %></td>
+<td><%= f.text_field :part %></td>
+</tr>
+
+<tr>
+<td><%= f.label :bmc %></td>
+<td><%= f.text_field :bmc %></td>
+</tr>
+
+<tr>
+<td><%= f.label :number_of_walls %></td>
+<td><%= f.text_field :number_of_walls %></td>
+</tr>
+
+<tr>
+<td><%= f.label :board_cliper %></td>
+<td><%= f.text_field :board_cliper %></td>
+</tr>
+
+<tr>
+<td><%= f.label :basis_weight_of_each_liner_and_medium %></td>
+<td><%= f.text_field :basis_weight_of_each_liner_and_medium %></td>
+</tr>
+
+<tr>
+<td><%= f.label :inside_liner %></td>
+<td><%= f.text_field :inside_liner %></td>
+</tr>
+
+
+<tr>
+<td><%= f.label :first_medium %></td>
+<td><%= f.text_field :first_medium %></td>
+</tr>
+
+<tr>
+<td><%= f.label :outside_liner %></td>
+<td><%= f.text_field :outside_liner %></td>
+</tr>
+
+<tr>
+<td><%= f.label :combined_basis_weight %></td>
+<td><%= f.text_field :combined_basis_weight %></td>
+</tr>
+
+<tr>
+<td><%= f.label :flute %></td>
+<td><%= f.text_field :flute %></td>
+</tr>
+
+<tr>
+<td><%= f.label :method_of_joining_panels %></td>
+<td><%= f.text_field :method_of_joining_panels %></td>
+</tr>
+
+<tr>
+<td><%= f.label :manufacturers_joint %></td>
+<td><%= f.text_field :manufacturers_joint %></td>
+</tr>
+
+<tr>
+<td><%= f.label :flap_size %></td>
+<td><%= f.text_field :flap_size %></td>
+</tr>
+
+<tr>
+<td><%= f.label :location %></td>
+<td><%= f.text_field :location %></td>
+</tr>
+
+<tr>
+<td><%= f.label :dimensions_external%></td>
+<td><%= f.text_field :dimensions_external%></td>
+</tr>
+
+<tr>
+<td><%= f.label :dimensions_internal %></td>
+<td><%= f.text_field :dimensions_internal %></td>
+</tr>
+
+<tr>
+<td><%= f.label :top_flap_inner_gap_or_meet %></td>
+<td><%= f.text_field :top_flap_inner_gap_or_meet %></td>
+</tr>
+
+<tr>
+<td><%= f.label :top_flap_outer_overlap_or_meet %></td>
+<td><%= f.text_field :top_flap_outer_overlap_or_meet %></td>
+</tr>
+
+<tr>
+<td><%= f.label :bottom_flap_inner_gap_or_meet %></td>
+<td><%= f.text_field :bottom_flap_inner_gap_or_meet %></td>
+</tr>
+
+<tr>
+<td><%= f.label :bottom_flap_outer_overlap_or_meet %></td>
+<td><%= f.text_field :bottom_flap_outer_overlap_or_meet %></td>
+</tr>
+
+<tr>
+<td><%= f.label :stacking_height  %></td>
+<td><%= f.text_field :stacking_height  %></td>
+</tr>
+
+<tr>
+<td><%= f.label :handles_material_type_number_and_position %></td>
+<td><%= f.text_field :handles_material_type_number_and_position %></td>
+</tr>
+
+<tr>
+<td><%= f.label :tare_weight %></td>
+<td><%= f.text_field :tare_weight %></td>
+</tr>
+
+<tr>
+<td><%= f.label :closure_method_of_box %></td>
+<td><%= f.text_field :closure_method_of_box %></td>
+</tr>
+
+<tr>
+<td><%= f.label :top %></td>
+<td><%= f.text_field :top %></td>
+</tr>
+
+
+<tr><td><%= f.label :bottom%></td>
+<td><%= f.text_field :bottom%> </td>
+</tr>
+
+  <div class="actions">
+<tr>
+   <td> <%= f.submit %></td>
+</tr>
+  </div>
+<% end %>
+</table>
+
+<!--<%= link_to 'Show', @package %> |
+<%= link_to 'Back', packages_path %>-->

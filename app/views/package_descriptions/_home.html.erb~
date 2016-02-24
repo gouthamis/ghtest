@@ -1,0 +1,7 @@
+    <% home = homes %>
+      
+        <%= raw(home.istm_no) %>
+        <%= raw(home.istm_name) %>
+        <%= raw(home.company_name) %>
+        <%= raw(home.date) %><br /><br />
+    

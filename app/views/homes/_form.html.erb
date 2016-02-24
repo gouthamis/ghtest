@@ -1,0 +1,64 @@
+
+
+<div class="container">
+
+<%= form_for(@home) do |f| %>
+  <% if @home.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@home.errors.count, "error") %> prohibited this home from being saved:</h2>
+
+      <ul>
+      <% @home.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+  <table border = "5"  align="center" style="height:200px;width:900px">
+<td >
+
+
+<div class="col-sm-6">
+      <img src="/assets/tests.jpg"  align="top" style="width:100px;height:100px;">
+  <br /> <br />
+        <label for='name'><b>Packaging and Product<br>Testing And Consulting,Inc<b>
+        <p> 4090, Thunderbird lane</p>
+        <p> Fairfield, OH 45014</p>
+        <p> Phone: (513)870-0080 </p>
+        <p> Fax (513) 870-0017 </p>
+        <p> ISO 17025 ACCREDITED </p> </label>
+
+  <div class="field">
+    <%= f.label :istm_no %><br>
+    <%= f.text_field :istm_no %>
+  </div>
+  <div class="field">
+    <%= f.label :istm_name %><br>
+    <%= f.text_field :istm_name %>
+
+    </div>
+  <div class="field">
+    <%= f.label :company_name %><br>
+    <%= f.text_field :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </div>
+</div>
+
+<div class="col-sm-6 pull-right">
+    <img class="img-responsive" alt="Brand" src="/assets/tests.jpg" style="width:700px;height:500px" >
+</div>
+</td>
+</table>
+</div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

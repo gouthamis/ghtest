@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Istm no:</strong>
+  <%= @home.istm_no %>
+</p>
+
+<p>
+  <strong>Istm name:</strong>
+  <%= @home.istm_name %>
+</p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @home.company_name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @home.date %>
+</p>
+
+<%= link_to 'Edit', edit_home_path(@home) %> |
+<%= link_to 'Back', homes_path %>

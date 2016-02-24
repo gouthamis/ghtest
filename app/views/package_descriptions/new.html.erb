@@ -1,0 +1,195 @@
+<div class="container">
+</table>
+<br/>
+<table border = "2" style="width:1000px" >
+<tr>
+<td align="center" height="30px"><b>Section 2- Package Description</b></td>
+</tr>
+</table>
+<div>
+<div id="combine">
+    <label for='name'>Combination packaging</label>
+</div>
+<div id="life">
+    <label for='name'>life cycle of 24 months</label>
+</div>
+<div id="new">
+    <label for='name'>New Design Testing</label>
+  <br />
+</div>
+</div>
+<style>
+#combine label{
+float: left;
+margin-left: 40px;
+font-weight: normal;
+}
+#life label{
+float: left;
+margin-left: 200px;
+font-weight: normal;
+}
+#new label{
+float: left;
+margin-left: 300px;
+font-weight: normal;
+}
+</style>
+<br/>
+<p>The Packaging System listed below is submitted for UN Certification and has several parts as follows</p>
+<br />
+
+
+<%= form_tag action: :create do | p |%>
+<!--<%= text_field_tag :client_name, client_name(params[:format]), disabled: true%><br/>-->
+<div class="form-group">
+<%= label_tag :package_pack_type%>
+<%= text_field_tag :package_pack_type%><br \>
+</div>
+<ol type="1">
+  <div class="form-group">
+<li> The Exterior corrugated cartor <%= text_field_tag :p1 %> contains everything listed below in one exterior box as presented for testing.</li>
+</div>
+ <ol type="A">
+   <div class="form-group">
+ <li>10 - inner chipboard carton <%= text_field_tag :p2, nil, placeholder: "Enter Package No" %>.Each inner chipboard box contains:</li>
+</div>
+ <ol type="I">
+   <div class="form-group">
+ <li>7 - positive means of closure Ziploc bags with pouch <%= text_field_tag :p3 %></li>
+ </div>
+ <ol type="i">
+   <div class="form-group">
+ <li>2 - ultra vials <%= text_field_tag :p4%></li>
+ </div>
+ <ol type="a">
+   <div class="form-group">
+ <li>2 - scoops <%= text_field_tag :p5%></li>
+ </div>
+ <div class="form-group">
+ <li>2 - ultra vial caps <%= text_field_tag :p6%></li>
+ </div>
+ </ol>
+  <div class="form-group">
+ <li>1 - Para Pak vial <%= text_field_tag :p7%></li>
+ </div>
+
+ <ol type="a">
+    <div class="form-group">
+ <li>1 - Spork <%= text_field_tag :p8%></li>
+ </div>
+  <div class="form-group">
+ <li>2 - Para Pak vial cap <%= text_field_tag :p9%></li>
+ </div>
+ </ol>
+  <div class="form-group">
+ <li>Instruction set <%= text_field_tag :p10%></li>
+ </div>
+ </ol>
+  <div class="form-group">
+ <li>Instruction sheet <%= text_field_tag :p11%></li>
+ </div>
+  <div class="form-group">
+ <li>1 - Release key <%= text_field_tag :p12%></li>
+ </div>
+ </ol>
+  <div class="form-group">
+ <li>2 - Inner chipboard carton <%= text_field_tag :p13%>. Each inner chipboard box contains:</li>
+ </div>
+ <ol type="I">
+    <div class="form-group">
+  <li>7 - positive means of closure Ziploc bags with pouch <%= text_field_tag :p14%> </li>
+</div>
+  <ol type="i">
+     <div class="form-group">
+   <li>2 - ultra vials <%= text_field_tag :p15%> </li>
+ </div>
+   <ol type="a">
+      <div class="form-group">
+    <li>2 - scoops <%= text_field_tag :p16%></li>
+  </div>
+   <div class="form-group">
+    <li>2 - ultra vial caps <%= text_field_tag :p17%></li>
+  </div>
+    </ol>
+     <div class="form-group">
+    <li>1 - Para Pak vial <%= text_field_tag :p18%></li>
+  </div>
+    <ol type="a">
+       <div class="form-group">
+     <li>1 - Spork <%= text_field_tag :p19%></li>
+   </div>
+    <div class="form-group">
+     <li>1 - Para Pak vial cap <%= text_field_tag :p20%></li>
+   </div>
+     </ol>
+      <div class="form-group">
+ <li>Instruction set <%= text_field_tag :p21%></li>
+ </div>
+  <div class="form-group">
+   <li>1 - dropper bottle <%= text_field_tag :p22%></li>
+ </div>
+   <ol type ="a">
+      <div class="form-group">
+    <li>1 - dropper bottle tip <%= text_field_tag :p23%></li>
+  </div>
+   <div class="form-group">
+    <li>1 - dropper bottle cap <%= text_field_tag :p24%></li>
+  </div>
+    </ol>
+   </ol>
+ <div class="form-group">
+  <li>Instruction sheet <%= text_field_tag :p25%></li>
+</div>
+   <div class="form-group">
+  <li>1 - Release key <%= text_field_tag :p26%> </li>
+</div>
+  </ol>
+   <div class="form-group">
+  <li>4 - Absorbent pads <%= text_field_tag :p27%></li>
+</div>
+ </ol>
+ </ol>
+  <div class="form-group">
+ <p><b>Alternate Pach 3414</b></p>
+ </div>
+ <ol type= "1">
+    <div class="form-group">
+    <li>The Exterior corrugated carton <%= text_field_tag :p28 %> contains everything listed below in one exteriro box as presented for testign</li>
+  </div>
+  </ol>
+  <ol type = "A">
+     <div class="form-group">
+    <li>4 - Absorbent pads <%= text_field_tag :p29%></li>
+  </div>
+   <div class="form-group">
+    <li>1 - folded instruction sheet</li>
+  </div>
+   <div class="form-group">
+    <li>200 - positive means of closure Ziploc bags pouch <%= text_field_tag :p30%>. Each Ziploc bag with pouch contains:
+    </div>
+       <ol type ="i">
+          <div class="form-group">
+                <li>1 - Para Pak vial <%= text_field_tag :p31%>
+                </div>
+                 <ol type="a">
+                    <div class="form-group">
+                         <li>1 - Spork <%= text_field_tag :p32%></li>
+                       </div>
+                        <div class="form-group">
+                         <li>1 - Para Pak vial cap <%= text_field_tag :p33%></li>
+                       </div>
+                  </ol>
+                </li>
+                 <div class="form-group">
+                <li>1 - Instruction sheet <%= text_field_tag :p34%></li>
+              </div>
+             </ol>
+    </li>
+   </ol>
+ <%= submit_tag 'Submit', :class=>"btn btn-primary"%>
+ <!--<%= link_to 'Back', package_test_reports_path , :class=>"btn btn-info" %>-->
+<%end%>
+
+<!--<%= link_to 'Back', package_descriptions_path , :class=>"btn btn-info" %>-->
+</div>

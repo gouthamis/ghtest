@@ -1,0 +1,21 @@
+<%= form_for(@package_description) do |f| %>
+  <% if @package_description.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@package_description.errors.count, "error") %> prohibited this package_description from being saved:</h2>
+
+      <ul>
+      <% @package_description.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :package_number %><br>
+    <%= f.text_field :package_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

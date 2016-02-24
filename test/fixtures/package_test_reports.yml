@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_details: MyString
+  testing_performed_by: MyString
+  test_date: 2016-02-13
+  package_details: MyString
+  manufacture_details: MyString
+  authorized_signature: MyString
+  release_date: 2016-02-13
+  packaging_group1: MyString
+  packaging_group2: MyString
+  personal_present_during_test: MyString
+
+two:
+  customer_details: MyString
+  testing_performed_by: MyString
+  test_date: 2016-02-13
+  package_details: MyString
+  manufacture_details: MyString
+  authorized_signature: MyString
+  release_date: 2016-02-13
+  packaging_group1: MyString
+  packaging_group2: MyString
+  personal_present_during_test: MyString

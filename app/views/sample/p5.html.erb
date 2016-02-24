@@ -1,0 +1,195 @@
+<html>
+<meta charset="ISO-8859-1">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="bootstrap.min.js"></script>
+<title>Page5</title>
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	var cnt = 2;
+	$("#anc_add").click(function() {
+		$('#tbl1 tr').last().after('<tr class="customInput"><td class="headerClass"><input type="text" name="txtbox" size="45"</td><td class="valueClass"><input type="text" name="txtbx"/></td></tr>');
+			cnt++;
+	});
+
+
+	$("#submitBtn").click(function() {
+	var xmlForDynamicTags = "";
+
+
+		$('#tbl1 > tbody >tr').each(function(){
+		if($(this).find('td').text()!=""){
+			var heading = $(this).find('td:first').text();
+			var val = $(this).find('td:last > input').val();
+			if(heading!=undefined || heading.trim()!="" || val!=undefined){
+				heading = heading.replace(/[^a-zA-Z<>/.]/g, '');
+				xmlForDynamicTags += "<"+heading+">"+val+"</"+heading+">";
+
+			}
+			}
+		});
+
+		$('.customInput').each(function(){
+			var heading = $(this).find('.headerClass > input').val();
+			var val = $(this).find('.valueClass > input').val();
+			heading = heading.replace(/[^a-zA-Z<>/.]/g, '');
+			xmlForDynamicTags += "<"+heading+">"+heading+"</"+heading+">";
+		});
+		console.log(xmlForDynamicTags);
+		alert(xmlForDynamicTags);
+	});
+
+					$("#anc_rem").click(function() {
+						if ($('#tbl1 tr').size() > 1) {
+							$('#tbl1 tr:last-child').remove();
+						} else {
+							alert('One row should be present in table');
+						}
+					});
+
+				});
+</script>
+
+</head>
+<body>
+		<%= form_tag('p5_generate_xml', :method=>'post') do %>
+<div class="container">
+<font color="#941c62">
+<h2>Exterior corrugated 3414 carton</h2>
+<a href="javascript:void(0);" id="anc_add">Add Row</a> &nbsp;
+ 				<a href="javascript:void(0);" id="anc_rem">Remove Row</a>
+<table border="1" id="tbl1" cellpadding="1" cellspacing="1">
+<tr bgcolor=" #941c62"></tr>
+<tr>
+<td><input type="text" name="txtbx1" value="Name" size="45"></td><td><input type="text" name="txtbx1" value="Values"></td>
+</tr>
+<tr>
+<td>Manufacturer</td>
+<td><input type="text" name="dyn1"></td>
+</tr>
+<tr>
+<td>Manufacturer Location</td>
+<td><input type="text" name="dyn2"></td>
+</tr>
+<tr>
+<td>Material</td>
+<td><input type="text" name="dyn3"></td>
+</tr>
+<tr>
+<td>Box Style</td>
+<td><input type="text" name="dyn4"></td>
+</tr>
+<tr>
+<td>Part</td>
+<td><input type="text" name="dyn5"></td>
+</tr>
+<tr>
+<td>BMC</td>
+<td><input type="text" name="dyn6"></td>
+</tr>
+<tr>
+<td>Number Of Walls</td>
+<td><input type="text" name="dyn7"></td>
+</tr>
+<tr>
+<td>Board Cliper</td>
+<td><input type="text" name="dyn8"></td>
+</tr>
+<tr>
+<td>Basis Weight of Each Liner and Medium</td>
+<td><input type="text" name="dyn9"></td>
+</tr>
+<tr>
+<td>Inside Liner</td>
+<td><input type="text" name="dyn10"></td>
+</tr>
+<tr>
+<td>1st Medium</td>
+<td><input type="text" name="dyn11"></td>
+</tr>
+<tr>
+<td>Outside Liner</td>
+<td><input type="text" name="dyn12"></td>
+</tr>
+<tr>
+<td>Combined Basis Weight</td>
+<td><input type="text" name="dyn13"></td>
+</tr>
+<tr>
+<td>Flute</td>
+<td><input type="text" name="dyn14"></td>
+</tr>
+<tr>
+<td>Method of Joining Panels</td>
+<td><input type="text" name="dyn15"></td>
+</tr>
+<tr>
+<td>Manufacturer's Joint</td>
+<td><input type="text" name="dyn16"></td>
+</tr>
+<tr>
+<td>Flap Size</td>
+<td><input type="text" name="dyn17"></td>
+</tr>
+<tr>
+<td>Location</td>
+<td><input type="text" name="dyn18"></td>
+</tr>
+<tr>
+<td>Dimensions external (L*W*H)</td>
+<td><input type="text" name="dyn19"></td>
+</tr>
+<tr>
+<td>Dimensions Internal (L*W*H)</td>
+<td><input type="text" name="dyn20"></td>
+</tr>
+<tr>
+<td>Top flap inner gap or meet</td>
+<td><input type="text" name="dyn21"></td>
+</tr>
+<tr>
+<td>Top flap outer overlap or meet</td>
+<td><input type="text" name="dyn22"></td>
+</tr>
+<tr>
+<td>Bottom flap inner gap or meet</td>
+<td><input type="text" name="dyn23"></td>
+</tr>
+<tr>
+<td>Bottom flap outer overlap or meet</td>
+<td><input type="text" name="dyn24"></td>
+</tr>
+<tr>
+<td>Stacking height(if different from box height)</td>
+<td><input type="text" name="dyn25"></td>
+</tr>
+<tr>
+<td>Handles, material type, number and position</td>
+<td><input type="text" name="dyn26"></td>
+</tr>
+<tr>
+<td>Tare Weight</td>
+<td><input type="text" name="dyn27"></td>
+</tr>
+<tr>
+<td>Closure method of box</td>
+<td><input type="text" name="dyn28"></td>
+</tr>
+<tr>
+<td>Top</td>
+<td><input type="text" name="dyn29"></td>
+</tr>
+<tr>
+<td>Bottom</td>
+<td><input type="text" name="dyn30"></td>
+</tr>
+</table>
+	<%= submit_tag 'Save' %>
+</font>
+</div>
+<% end %>
+</body>
+</html>

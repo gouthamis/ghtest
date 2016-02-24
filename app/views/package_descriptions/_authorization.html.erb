@@ -1,0 +1,50 @@
+<% if not @package_description.package_test_report.blank? %>
+      <% pckg = @package_description.package_test_report %>
+		<p><b>Customer</b></p>
+		<p><%= pckg.client_name%></p>
+		<p><%= pckg.customer_details%></p>
+        <p><b>Testing Perfomed By :</b></p>
+        <p><%= pckg.testing_performed_by%></p>
+        <p><b>Test Date :</b></p>
+        <p><%= pckg.test_date%></p>
+        <p><b>Packaeg Identifiers :</b></p>
+        <p><%= pckg.package_details%></p>
+        <table border = "2">
+	      <tr>
+		    <td><%= pckg.manufacture_details%></td>
+	 	  </tr>
+        </table>
+        <br/>
+        <table border = "2" style="width:850px">
+	      <tr>
+		    <td align="center">Approval Authorization</td>
+		  </tr>
+	    </table>
+		  <p>The testing conducted on subject U.N. Hazardous Material packaging compiles with applicable hazardous material.
+      regultion, provision, and/or <br> special permits and/or approvals.</p>
+        <table border = "2" style="width:850px">
+	      <tr>
+		    <td align="center">Test Purpose</td>
+		  </tr>
+	    </table>
+		<p>The purpose of this testing conducted on subject U.N. Hazardous Material packaging was to quality/certify this packaging based on <br>United Nations Test Requirements for <%= pckg.packaging_group1%>
+			 Criteria. The package product is listed as a <%= pckg.packaging_group2 %></p>
+			 <table border = "2" style="width:850px">
+	      <tr>
+		    <td align="center">Personal Present During Testing</td>
+		  </tr>
+	    </table>
+	    <p>H. Perry Hock, President and Technical Director, gh Package & Product Testing and Consulting, INC.<br>
+      Tomithy Glasmeier, Laboratory Manager, gh Packaging & Product Testing and Consulting, INC.<br>
+      Carol Metz, Supervisor, Materials Testing, gh Packaging & Product Testing and Consulting, INC.<br>
+      Ronald Sorrel, Test Engineer, gh Packaging & Product Testing and Consulting, INC.<br>
+      Andrew Galish, Laboratory Technician, gh Packaging & Product Testing and Consulting, INC.<br>
+      Caarin Galish, Laboratory Technician, gh Packaging & Product Testing and Consulting, INC.<br>
+      Joseph Becker, Laboratory Technician, gh Packaging & Product Testing and Consulting, INC.</p>
+	    <table border = "2" style="width:850px">
+	      <tr>
+		    <td align="center">Test Equipment</td>
+		  </tr>
+	    </table>
+	    <p><img alt="Brand" src="/assets/ppp.jpg"></p>
+    <%end%>

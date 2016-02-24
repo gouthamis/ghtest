@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<div class="panel-heading">
+  <% if not @home.blank?%>
+
+<%= render "form" %>
+<% end %>
+</div>
+    <!--<%= link_to 'Add Cover Page ', new_home_path, :class=>"btn btn-primary" %>-->
+
+     <%= link_to 'Create Package', new_package_test_report_path, :class=>"btn btn-primary" %>
+      <!-- <%= link_to 'create a package', new_package_description_path, :class=>"btn btn-primary" %> -->
+    </div>

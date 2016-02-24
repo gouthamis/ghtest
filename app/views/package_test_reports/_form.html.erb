@@ -1,0 +1,115 @@
+<%= form_for(@package_test_report) do |f| %>
+  <% if @package_test_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@package_test_report.errors.count, "error") %> prohibited this package_test_report from being saved:</h2>
+
+      <ul>
+      <% @package_test_report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="container">
+  <img src="/assets/top.jpg"  align="top" style="width:1150px;height:250px">
+  <div class="form-horizontal">
+    <div class="field">
+        <div class="form-group">
+            <h5><%= f.label :client_name, :class=>"col-sm-2 control-label" %></h5>
+          <div class="col-sm-10">
+            <%= f.text_field :client_name, :class=>"form-control" %>
+          </div>
+        </div>
+    </div>
+  <div class="field">
+    <div class="form-group">
+        <h5><%= f.label :customer_details, :class=>"col-sm-2 control-label" %></h5>
+    <div class="col-sm-10">
+    <%= f.text_field :customer_details, :class=>"form-control" %>
+  </div>
+  </div>
+</div>
+  <div class="field">
+    <div class="form-group">
+    <h5><%= f.label :testing_performed_by, :class=>"col-sm-2 control-label" %></h5>
+    <div class="col-sm-10">
+    <%= f.text_field :testing_performed_by, :class=>"form-control" %>
+  </div>
+  </div>
+</div>
+
+
+
+  <div class="field">
+      <div class="form-group">
+    <h5><%= f.label :test_date, :class=>"col-sm-2 control-label" %></h5>
+    <div class="col-sm-10">
+    <%= f.date_select :test_date, :class=>"form-control" %>
+  </div>
+</div>
+</div>
+
+
+  <div class="field">
+    <div class="form-group">
+    <h5><%= f.label :package_details ,:class=>"col-sm-2 control-label"%></h5>
+    <div class="col-sm-10">
+    <%= f.text_field :package_details,:class=>"form-control" %>
+  </div>
+</div>
+</div>
+  <div class="field">
+    <div class="form-group">
+    <h5><%= f.label :manufacture_details,:class=>"col-sm-2 control-label" %></h5>
+      <div class="col-sm-10">
+    <%= f.text_field :manufacture_details,:class=>"form-control" %>
+  </div>
+</div>
+</div>
+  <div class="field">
+    <div class="form-group">
+    <h5><%= f.label :authorized_signature,:class=>"col-sm-2 control-label" %></h5>
+      <div class="col-sm-10">
+    <%= f.text_field :authorized_signature,:class=>"form-control" %>
+  </div>
+</div>
+</div>
+  <div class="field">
+      <div class="form-group">
+    <h5><%= f.label :release_date,:class=>"col-sm-2 control-label" %></h5>
+    <div class="col-sm-10">
+    <%= f.date_select :release_date,:class=>"form-control" %>
+  </div>
+</div>
+</div>
+  <div class="field">
+    <div class="form-group">
+  <h5><%= f.label :packaging_group1 ,:class=>"col-sm-2 control-label"%></h5>
+  <div class="col-sm-10">
+    <%= f.text_field :packaging_group1,:class=>"form-control" %>
+  </div>
+</div>
+</div>
+  <div class="field">
+    <div class="form-group">
+    <h5><%= f.label :packaging_group2,:class=>"col-sm-2 control-label" %></h5>
+      <div class="col-sm-10">
+    <%= f.text_field :packaging_group2,:class=>"form-control" %>
+  </div>
+</div>
+</div>
+  <div class="field">
+      <div class="form-group">
+    <h5><%= f.label :personal_present_during_test,:class=>"col-sm-2 control-label" %></h5>
+        <div class="col-sm-10">
+    <%= f.text_field :personal_present_during_test,:class=>"form-control" %>
+  </div>
+</div>
+</div>
+  <img src="/assets/bottom.jpg"  align="top" style="width:1150px; height:350px;" position="300px,300px">
+</div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

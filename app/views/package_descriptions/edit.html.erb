@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+<h1>Editing Package Description</h1>
+<%= form_tag action: :update, method: :put do %>
+<% k = eval(@package_description.package_number)%>
+<%= label_tag :package_pack_type%>
+<%= text_field_tag :package_pack_type%>
+<ol type="1">
+<li> The Exterior corrugated cartor<%= text_field_tag :p1,k[0] %>contains everything listed below in one exterior box as presented for testing.</li>
+<li>
+	<ol type="A">
+	<li>10 - inner chipboard carton<%= text_field_tag :p2,k[1]%>.Each inner chipboard box contains:</li>
+	
+	<ol type="I">
+	<li>7 - positive means of closure Ziploc bags with pouch<%= text_field_tag :p3,k[2]%></li>
+	<ol type="i">
+	<li>2 - ultra vials<%= text_field_tag :p4,k[3]%></li>
+	<ol type="a">
+	<li>2 - scoops<%= text_field_tag :p5,k[4]%></li>
+	<li>2 - ultra vial caps<%= text_field_tag :p6,k[5]%></li>
+	</ol>
+	<li>1 - Para Pak vial<%= text_field_tag :p7,k[6]%></li>
+	<ol type="a">
+	<li>1 - Spork<%= text_field_tag :p8,k[7]%></li>
+	<li>2 - Para Pak vial cap <%= text_field_tag :p9,k[8]%></li>
+	</ol>
+	<li>Instruction set<%= text_field_tag :p10,k[9]%></li>
+	</ol>
+	<li>Instruction sheet<%= text_field_tag :p11,k[10]%></li>
+	<li>1 - Release key <%= text_field_tag :p12,k[11]%></li>
+	</ol>
+	<li>2 - Inner chipboard carton<%= text_field_tag :p13,k[12]%>. Each inner chipboard box contains:</li>
+	<ol type="I">
+		<li>7 - positive means of closure Ziploc bags with pouch<%= text_field_tag :p14,k[13]%> </li>
+		<ol type="i">
+			<li>2 - ultra vials<%= text_field_tag :p15,k[14]%> </li>
+			<ol type="a">
+				<li>2 - scoops<%= text_field_tag :p16,k[15]%></li>
+				<li>2 - ultra vial caps<%= text_field_tag :p17,k[16]%></li>
+				</ol>
+				<li>1 - Para Pak vial<%= text_field_tag :p18,k[17]%></li>
+				<ol type="a">
+     <li>1 - Spork<%= text_field_tag :p19,k[18]%></li>
+     <li>1 - Para Pak vial cap<%= text_field_tag :p20,k[19]%></li>
+					</ol>
+	<li>Instruction set<%= text_field_tag :p21,k[20]%></li>
+   <li>1 - dropper bottle<%= text_field_tag :p22,k[21]%></li>
+   <ol type ="a">
+   	<li>1 - dropper bottle tip<%= text_field_tag :p23,k[22]%></li>
+   	<li>1 - dropper bottle cap<%= text_field_tag :p24,k[23]%></li>
+   	</ol>
+			</ol>
+
+		<li>Instruction sheet<%= text_field_tag :p25,k[24]%></li>
+		<li>1 - Release key<%= text_field_tag :p26,k[25]%> </li>
+		</ol>
+		<li>4 - Absorbent pads<%= text_field_tag :p27,k[26]%></li>
+	</ol>
+	</ol>
+	<p><b>Alternate Pach 3414</b></p>
+	<ol type= "1">
+    <li>The Exterior corrugated carton<b>(P/N:<%= text_field_tag :p28, k[27] %>)</b> contains everything listed below in one exteriro box as presented for testign</li>
+		</ol>
+		<ol type = "A">
+		  <li>4 - Absorbent pads<%= text_field_tag :p29, k[28]%></li>
+		  <li>1 - folded instruction sheet</li>
+		  <li>200 - positive means of closure Ziploc bags pouch <%= text_field_tag :p30, k[29]%>. Each Ziploc bag with pouch contains:
+		     <ol type ="i">
+                <li>1 - Para Pak vial<%= text_field_tag :p31, k[30]%>
+                	<ol type="a">
+                         <li>1 - Spork <%= text_field_tag :p32, k[31]%></li>
+                         <li>1 - Para Pak vial cap <%= text_field_tag :p33, k[32]%></li>
+                		</ol>
+                </li>
+                <li>1 - Instruction sheet <%= text_field_tag :p34, k[33]%></li>
+             </ol>
+		  </li>
+			</ol>
+	<%= submit_tag 'Submit'%>
+<%end%>
+
+
+
+<%= link_to 'Show', @package_description %> |
+<%= link_to 'Back', package_descriptions_path %>

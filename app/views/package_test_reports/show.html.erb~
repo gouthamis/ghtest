@@ -1,0 +1,117 @@
+<div class="container">
+      <% pckg = @package_test_report %>
+  <p><b>Customer</b></p>
+  <p><%= pckg.client_name%></p>
+  <p><%= pckg.customer_details%></p>
+        <p><b>Testing Perfomed By :</b></p>
+        <p><%= pckg.testing_performed_by%></p>
+        <p><b>Test Date :</b></p>
+        <p><%= pckg.test_date%></p>
+        <p><b>Package Identifiers :</b></p>
+        <p><%= pckg.package_details%></p>
+        <table border = "2">
+       <tr>
+      <td><%= pckg.manufacture_details%></td>
+     </tr>
+        </table>
+        <br/>
+        <table border = "2" style="width:1000px">
+       <tr>
+      <td align="center"><h5><b>Approval Authorization</b></h5></td>
+    </tr>
+     </table>
+      <p><h5>The testing conducted on subject U.N. Hazardous Material packaging compiles with applicable hazardous material.
+      regultion, provision, and/or special <br> permits and/or approvals.</h5></p>
+        <table border = "2" style="width:1000px">
+       <tr>
+      <td align="center"><h5><b>Test Purpose</h5></b></td>
+    </tr>
+     </table>
+  <p>The purpose of this testing conducted on subject U.N. Hazardous Material packaging was to quality/certify this packaging based on United Nations <br>
+<div class="form-group">
+ Test Requirements for <b><%= pckg.packaging_group1 %></b> Criteria. The package product is listed as a
+  <b><%= pckg.packaging_group2 %></b>
+</div>
+
+
+
+    <table border = "2" style="width:1000px">
+       <tr>
+      <td align="center"><h5><b>Personal Present During Testing</h5></b></td>
+    </tr>
+     </table>
+      <p>H. Perry Hock, President and Technical Director, gh Package & Product Testing and Consulting, INC.<br>
+      Tomithy Glasmeier, Laboratory Manager, gh Packaging & Product Testing and Consulting, INC.<br>
+      Carol Metz, Supervisor, Materials Testing, gh Packaging & Product Testing and Consulting, INC.<br>
+      Ronald Sorrel, Test Engineer, gh Packaging & Product Testing and Consulting, INC.<br>
+      Andrew Galish, Laboratory Technician, gh Packaging & Product Testing and Consulting, INC.<br>
+      Caarin Galish, Laboratory Technician, gh Packaging & Product Testing and Consulting, INC.<br>
+      Joseph Becker, Laboratory Technician, gh Packaging & Product Testing and Consulting, INC.</p>
+     <table border = "2" style="width:1000px"  style="height:10px">
+       <tr>
+      <td align="center"><h5><b>Test Equipment</h5></b></td>
+    </tr>
+     </table>
+     <p><img alt="Brand" src="/assets/ppp.jpg"></p>
+    </div>
+
+<br /><br />
+<%= link_to 'Edit', edit_package_test_report_path(@package_test_report), :class=>"btn btn-success" %> |
+<%= link_to 'Back', package_test_reports_path, :class=>"btn btn-success" %> |
+<%= link_to 'Add Package Description', new_package_description_path(format: @package_test_report.id ) , :class=>"btn btn-success" %>|
+<%= link_to 'See in pdf', package_test_report_path(@package_test_report, format: "pdf"), :class=>"btn btn-success" %>
+
+<!-- <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer details:</strong>
+  <%= @package_test_report.customer_details %>
+</p>
+
+<p>
+  <strong>Testing performed by:</strong>
+  <%= @package_test_report.testing_performed_by %>
+</p>
+
+<p>
+  <strong>Test date:</strong>
+  <%= @package_test_report.test_date %>
+</p>
+
+<p>
+  <strong>Package details:</strong>
+  <%= @package_test_report.package_details %>
+</p>
+
+<p>
+  <strong>Manufacture details:</strong>
+  <%= @package_test_report.manufacture_details %>
+</p>
+
+<p>
+  <strong>Authorized signature:</strong>
+  <%= @package_test_report.authorized_signature %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @package_test_report.release_date %>
+</p>
+
+<p>
+  <strong>Packaging group1:</strong>
+  <%= @package_test_report.packaging_group1 %>
+</p>
+
+<p>
+  <strong>Packaging group2:</strong>
+  <%= @package_test_report.packaging_group2 %>
+</p>
+
+<p>
+  <strong>Personal present during test:</strong>
+  <%= @package_test_report.personal_present_during_test %>
+</p>
+
+<%= link_to 'Edit', edit_package_test_report_path(@package_test_report) %> |
+<%= link_to 'Back', package_test_reports_path %> -->

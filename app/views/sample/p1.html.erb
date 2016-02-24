@@ -1,0 +1,79 @@
+
+<html>
+<meta charset="ISO-8859-1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Cover Page1</title>
+
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+
+</head>
+
+<style>
+#header {
+	background-color: white;
+	color: #941c62;
+	text-align: left;
+	padding: 1px;
+}
+
+#footer {
+	background-color: white;
+	color: #941c62;
+	clear: both;
+	text-align: center;
+	padding: 1px;
+}
+#something{
+	font-size: 15px;
+	float: right;
+	width: 10em;
+	margin-right: 59em;
+	padding-left: 10em;
+}
+#format{
+	font-weight: bolder;
+}
+</style>
+<body>
+	<%= form_tag('p1_generate_xml', :method=>'post') do %>
+	<div class="container">
+		<font color="#941c62">
+				<h3>Axiom Automated Report Writing Software</h3>
+					<h1>GH Package and Product Testing and Consulting Inc.</h1><br \>
+
+
+  					<p>Test No<%= text_field_tag 'dyn1','',:id => 'something' %></p>
+						<br \>
+						<div id='format'>
+							<p>Packaging Systems</p>
+						</div>
+						<p> Test Description<%= text_field_tag 'dyn2','',:id => 'something'%></p>
+
+						<br \>
+						<div id='format'>
+							<p>Laboratory Report</p>
+						</div>
+
+							<p>Prepared For<%= text_field_tag 'dyn3','',:id => 'something' %></p>
+							<p>Client Address 1<%= text_field_tag 'dyn4','',:id => 'something' %></p>
+							<p>Client Address 2<%= text_field_tag 'dyn5','',:id => 'something' %></p>
+							<p>Test Requested by<%= text_field_tag 'dyn6','',:id => 'something' %></p>
+							<p>Date Prepared<%= text_field_tag 'dyn7','',:id => 'something' %></p>
+							<br \>
+
+
+							<p>
+								<%= submit_tag 'Submit' %>
+							</p>
+
+				</div>
+		</font>
+	</div>
+<% end %>
+</body>
+</html>

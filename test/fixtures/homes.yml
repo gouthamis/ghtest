@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  istm_no: MyString
+  istm_name: MyString
+  company_name: MyString
+  date: 2016-02-09 00:06:48
+
+two:
+  istm_no: MyString
+  istm_name: MyString
+  company_name: MyString
+  date: 2016-02-09 00:06:48
